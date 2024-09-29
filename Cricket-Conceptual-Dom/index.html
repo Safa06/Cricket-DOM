@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="m-10">
+    <div class="menu-container flex justify-between font-bold text-2xl">
+        <h3>Budget: <span class="price-color" id="budget">2500</span>$</h3>
+        <h3>Cart: <span class="price-color" id="cart">0</span></h3>
+        <h3>Left: <span class="price-color" id="left">4</span></h3> 
+    </div>
+
+    <div class="main-container flex justify-around mt-20">
+        <div class="players-container grid grid-cols-2 gap-10">
+            <div class="player-btn shadow-2xl bg-yellow-100 p-10 text-center text-black font-bold rounded-xl">
+                <h5>Tamim Iqbal</h5>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="add-btn bg-blue-400 p-2 rounded-lg mt-5 text-white">Add to Cart</button>
+            </div>
+            <div class="player-btn shadow-lg bg-yellow-100 p-10 text-center text-black font-bold rounded-xl">
+                <h5>Masrafee</h5>
+                <h5>Price: <span>400</span>$</h5>
+                <h5>Category: <span>Ball</span></h5>
+                <button class="add-btn bg-blue-400 p-2 rounded-lg mt-5 text-white">Add to Cart</button>
+            </div>
+            <div class="player-btn shadow-lg bg-yellow-100 p-10 text-center text-black font-bold rounded-xl">
+                <h5>Virat Kohli</h5>
+                <h5>Price: <span>600</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="add-btn bg-blue-400 p-2 rounded-lg mt-5 text-white">Add to Cart</button>
+            </div>
+            <div class="player-btn shadow-lg bg-yellow-100 p-10 text-center text-black font-bold rounded-xl">
+                <h5>Sakib</h5>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Allrounder</span></h5>
+                <button class="add-btn bg-blue-400 p-2 rounded-lg mt-5 text-white">Add to Cart</button>
+            </div>
+            <div class="player-btn shadow-lg bg-yellow-100 p-10 text-center text-black font-bold rounded-xl">
+                <h5>Mushfiq</h5>
+                <h5>Price: <span>200</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="add-btn bg-blue-400 p-2 rounded-lg mt-5 text-white">Add to Cart</button>
+            </div>
+            <div class="player-btn shadow-lg bg-yellow-100 p-10 text-center text-black font-bold rounded-xl">
+                <h5>Liton Das</h5>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="add-btn bg-blue-400 p-2 rounded-lg mt-5 text-white">Add to Cart</button>
+            </div>
+            
+        </div>
+
+        <div class="cart-container">
+            <h2 class="text-2xl font-bold mb-10">My Cart</h2>
+            <hr>
+            <div class="selected-players flex gap-x-10 font-bold mb-5 mt-10">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+                <div class="category">Category</div>
+            </div>
+            <div id="selected-players-container">
+                <!-- <div class="flex"> egula create hocche
+                    <p>name</p>
+                    <p>price</p>
+                    <p>category</p>
+                </div> -->
+            </div>
+            <hr>
+            <h3 class="padding font-bold mb-10 mt-10">Total cost: <span id="total-cost">0</span>$</h3>
+            <hr>
+            <div class="coupon-code">
+                <input class="font-bold mb-10 mt-10 border-green-700 border-2 p-4 rounded-lg mr-3" type="text" id="coupon-code" placeholder="Coupon Code">
+                <button onclick="updateGrandTotal('apply-btn')" id="apply-btn" class="bg-green-700 text-white font-bold px-6 py-4 rounded-lg">Apply</button>
+            </div>
+            <hr>
+            <h3 class="padding font-bold mb-10 mt-10">Grand Total: <span id="grand-total">0</span>$</h3>
+        </div>
+    </div>
+    
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
